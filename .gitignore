@@ -1,3 +1,8 @@
 # configure file
 .idea/
+out/
 Dinosaur.iml
+
+data/
+image/
+music/

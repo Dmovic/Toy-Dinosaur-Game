@@ -16,7 +16,7 @@ public class Dinosaur {
     private int jumpValue = 0;
     private boolean jumpState = false;
     private int stepTimer = 0;
-    private final int JUMP_HIGHT = 100;
+    private final int JUMP_HEIGHT = 100;
     private final int LOWEST_Y = 0;
     private final int FRESH = FreshThread.FRESH;
 
@@ -58,7 +58,19 @@ public class Dinosaur {
     }
 
     public void move() {
-        // TODO
+        step();
+        if (jumpState) {
+            if (y >= LOWEST_Y) {
+                jumpValue = -4;
+            }
+            if (y <= LOWEST_Y - JUMP_HEIGHT) {
+                jumpValue = 4;
+            }
+            y += jumpValue;
+            if (y >= LOWEST_Y) {
+                jumpState = false;
+            }
+        }
     }
 
     public Rectangle getFootBounds() {

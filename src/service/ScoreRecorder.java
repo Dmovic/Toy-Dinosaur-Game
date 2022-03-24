@@ -101,7 +101,7 @@ public class ScoreRecorder {
         }
     }
 
-    public void addNewScore(int score) {
+    public static void addNewScore(int score) {
         int[] tmp = Arrays.copyOf(scores, 4);
         tmp[3] = score;
         Arrays.sort(tmp);
