@@ -18,8 +18,8 @@ public class Obstacle {
 
     public Obstacle() {
         try {
-            stone = ImageIO.read(new File("image/stone.jpg"));
-            cacti = ImageIO.read(new File("image/cacti.jpg"));
+            stone = ImageIO.read(new File("image/rock.png"));
+            cacti = ImageIO.read(new File("image/cacti.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,8 +29,8 @@ public class Obstacle {
         } else {
             image = stone;
         }
-        x = 800;
-        y = 200 - image.getHeight();
+        x = 1024;
+        y = 560 - image.getHeight();
         speed = BackgroundImage.SPEED;
     }
 

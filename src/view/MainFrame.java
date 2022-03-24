@@ -11,12 +11,13 @@ import java.awt.event.WindowEvent;
 public class MainFrame extends JFrame {
     public MainFrame() {
         restart();
-        setBounds(340, 150, 820, 260);
+        setBounds(340, 150, 1024, 720);
         setTitle("Running! Dinosaur! ");
         Sound.background();
         ScoreRecorder.init();
         addListener();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
     private void addListener() {
@@ -34,9 +35,5 @@ public class MainFrame extends JFrame {
         c.add(panel);
         addKeyListener(panel);
         c.validate();
-    }
-
-    public static void main(String[] args) {
-        MainFrame mf = new MainFrame();
     }
 }

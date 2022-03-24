@@ -17,16 +17,16 @@ public class Dinosaur {
     private boolean jumpState = false;
     private int stepTimer = 0;
     private final int JUMP_HEIGHT = 100;
-    private final int LOWEST_Y = 0;
+    private final int LOWEST_Y = 500;
     private final int FRESH = FreshThread.FRESH;
 
     public Dinosaur() {
         x = 50;
         y = LOWEST_Y;
         try {
-            image1 = ImageIO.read(new File("image/dinosaur1.jpg"));
-            image1 = ImageIO.read(new File("image/dinosaur2.jpg"));
-            image1 = ImageIO.read(new File("image/dinosaur3.jpg"));
+            image1 = ImageIO.read(new File("image/dinosaur13.jpg"));
+            image2 = ImageIO.read(new File("image/dinosaur23.jpg"));
+            image3 = ImageIO.read(new File("image/dinosaur33.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,10 +74,10 @@ public class Dinosaur {
     }
 
     public Rectangle getFootBounds() {
-        return new Rectangle(x + 30, y + 59, 29, 18);
+        return new Rectangle(x + 20, y + 29, 29, 18);
     }
 
     public Rectangle getHeadBounds() {
-        return new Rectangle(x + 66, y + 25, 32, 22);
+        return new Rectangle(x + 16, y + 25, 32, 22);
     }
 }

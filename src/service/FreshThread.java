@@ -7,7 +7,7 @@ import view.ScoreDialog;
 import java.awt.*;
 
 public class FreshThread extends Thread {
-    public static final int FRESH = 20;
+    public static final int FRESH = 18;
     GamePanel p;
 
     public FreshThread(GamePanel gamePanel) {

@@ -28,7 +28,7 @@ public class GamePanel extends JPanel implements KeyListener {
 
     public GamePanel() {
         // width 800px, height 300px
-        image = new BufferedImage(800, 300, BufferedImage.TYPE_INT_BGR);
+        image = new BufferedImage(1024, 720, BufferedImage.TYPE_INT_BGR);
         g2 = image.createGraphics();
         background = new BackgroundImage();
         golden = new Dinosaur();
@@ -41,7 +41,7 @@ public class GamePanel extends JPanel implements KeyListener {
         background.roll();
         golden.move();
         g2.drawImage(background.image, 0, 0, this);
-        if (addObstacleTimer == 1300) {
+        if (addObstacleTimer >= 1300) {
             if (Math.random() * 100 > 40) {
                 list.add(new Obstacle());
             }

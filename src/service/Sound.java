@@ -16,6 +16,7 @@ public class Sound {
     private static void play(String file, boolean circulate) {
         try {
             MusicPlayer player = new MusicPlayer(file, circulate);
+            player.play();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
